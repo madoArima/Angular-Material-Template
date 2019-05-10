@@ -1,0 +1,101 @@
+<!--<mat-toolbar class="toolbarShell">My App</mat-toolbar>-->
+<!--<app-nav>Cargando...</app-nav>-->
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="false"
+  [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+  [mode]="(isHandset$ | async) ? 'over' : 'side'"
+  [opened]="!(isHandset$ | async)" >
+               <!-- -->
+
+    <mat-card>
+        <mat-card-header>
+            <img mat-card-avatar src="https://material.angular.io/assets/img/examples/shiba1.jpg">
+            <mat-card-title>Shiba Inu</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>                  
+
+    <mat-nav-list class="navList">           
+      <app-side-menu></app-side-menu>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar fxLayout="row" fxLayoutAlign="space-between center" color="primary">      
+
+      <div>
+        <!-- <button mat-button (click)="snav.toggle()"><mat-icon>{{apertura ? 'keyboard_arrow_left' : 'keyboard_arrow_right'}}</mat-icon></button> -->
+        <span>ClientApp</span>
+      </div>      
+
+      <div>
+        <button mat-icon-button [matMenuTriggerFor]="menuMensajes">
+          <mat-icon matBadge="" matBadgeColor="warn">email</mat-icon>
+        </button>
+
+        <button mat-icon-button [matMenuTriggerFor]="menuNotificaciones">
+          <mat-icon matBadge="15" matBadgeColor="warn">notifications</mat-icon>
+        </button>
+
+        <button mat-icon-button [matMenuTriggerFor]="menuMas">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+
+        <mat-menu #menuMensajes="matMenu">
+            <button mat-menu-item>
+              <mat-icon>dialpad</mat-icon>
+              <span>Redial</span>
+            </button>
+            <button mat-menu-item disabled>
+              <mat-icon>voicemail</mat-icon>
+              <span>Check voicemail</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>notifications_off</mat-icon>
+              <span>Disable alerts</span>
+            </button>
+          </mat-menu>
+
+          <mat-menu #menuNotificaciones="matMenu">
+              <button mat-menu-item>
+                <mat-icon>dialpad</mat-icon>
+                <span>Redial</span>
+              </button>
+              <button mat-menu-item disabled>
+                <mat-icon>voicemail</mat-icon>
+                <span>Check voicemail</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>notifications_off</mat-icon>
+                <span>Disable alerts</span>
+              </button>
+            </mat-menu>
+
+            <mat-menu #menuMas="matMenu">
+                <button mat-menu-item>
+                  <mat-icon>dialpad</mat-icon>
+                  <span>Redial</span>
+                </button>
+                <button mat-menu-item disabled>
+                  <mat-icon>voicemail</mat-icon>
+                  <span>Check voicemail</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>notifications_off</mat-icon>
+                  <span>Disable alerts</span>
+                </button>
+              </mat-menu>
+      </div>
+
+
+    </mat-toolbar>
+    
+    
+    <section>
+      <router-outlet></router-outlet>
+    </section>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

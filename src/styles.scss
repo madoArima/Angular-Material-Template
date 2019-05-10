@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+//@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+  html, body {
+    height: 100%;
+  }
+  body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+  *{
+    margin:0;
+    padding:0;
+  }
+
+  /** Estilos globales */
+  .container{
+    margin: 5px;
+  }
+
+  .filter-container-table{
+    margin: 5px;
+    width: 100%;    
+  }
+
+  .filter-table{
+    width: 70%;    
+    margin-right: 5%;
+  }
+  .select-columns-table{
+    width: 20%;    
+  }
+
+  .full-width-table {
+    width: 100%;
+  }
+    
+  .mat-paginator-sticky {
+    bottom: 0px;
+    position: sticky;
+    z-index: 10;
+  }
+
+  /* Estilos de los scroll*/
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #383636;
+}

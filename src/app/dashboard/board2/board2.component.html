@@ -1,0 +1,29 @@
+<div class="grid-container">
+    <h4 class="mat-h1">
+      Board-2
+    </h4>
+    <mat-grid-list cols="4" rowHeight="150px">
+      <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+        <mat-card class="dashboard-card">
+            <mat-card-title>
+                {{card.title}}              
+            </mat-card-title>
+            <mat-card-subtitle>
+              {{card.subtitleUp}} 
+              <button mat-icon-button class="more-button" aria-label="Toggle menu">                  
+                  <mat-icon [style.color]="card.trendingColor">{{card.trending}}</mat-icon>                  
+              </button>              
+            </mat-card-subtitle>
+
+          <mat-card-content class="dashboard-card-content">
+              <label size="17" style="font-size:25px;" type="text">{{card.count|number}}</label>
+          </mat-card-content>
+
+          <mat-card-subtitle>
+              {{card.subtitleDown}}
+          </mat-card-subtitle>
+
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
