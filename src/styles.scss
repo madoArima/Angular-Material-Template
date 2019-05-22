@@ -15,33 +15,79 @@
   img {
     max-width: 100%;
   }
-
+ 
   /** Estilos globales */
-  .container{
-    margin: 5px;
-  }
+  // .container{
+  //   margin: 5px;
+  // }
 
-  .filter-container-table{
-    margin: 5px;
-    width: 100%;    
-  }
+  // .filter-container-table{
+  //   margin: 5px;
+  //   width: 100%;    
+  // }
 
-  .filter-table{
-    width: 70%;    
-    margin-right: 5%;
-  }
-  .select-columns-table{
-    width: 20%;    
-  }
+  // .filter-table{
+  //   width: 70%;    
+  //   margin-right: 5%;
+  // }
+  // .select-columns-table{
+  //   width: 20%;    
+  // }
 
-  .full-width-table {
-    width: 100%;
-  }
+  // .full-width-table {
+  //   width: 100%;
+  // }
     
-  .mat-paginator-sticky {
-    bottom: 0px;
-    position: sticky;
-    z-index: 10;
+  // .mat-paginator-sticky {
+  //   bottom: 0px;
+  //   position: sticky;
+  //   z-index: 10;
+  // }
+
+  /** Estilos Globales  de la shell */
+
+  mat-sidenav-container.shell-container {
+    height: 100%;
+  }
+
+  mat-sidenav.sidenav {
+    width: 200px;    
+
+    // Cabecero de sidenav
+    .header-snav-container{      
+      height: 10%;
+    }
+    .header-snav-container .mat-toolbar{
+      background: inherit;
+    }
+
+    .nav-side-user{
+      height: 10%;
+    }
+
+    .nav-list{      
+      height: 80%;
+      overflow: auto;
+    }
+  }
+
+  // Principal Container
+  mat-sidenav-content{
+
+    header.header-container{
+      height:10%;    
+    }
+
+    section.section-container{  
+      height:90%;
+      overflow:auto;            
+    }
+  }
+
+  
+  .nav-list {
+    height: 82%;
+    overflow: auto;
   }
 
   /* Estilos de los scroll*/

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -7,12 +7,12 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./shell.component.scss']
 })
 export class ShellComponent implements OnInit {  
+  
+  @ViewChild('snav') snav: ElementRef<HTMLInputElement>;
 
-  apertura: boolean = true;
   constructor() { }
 
   ngOnInit() {
 
   }
-
 }
